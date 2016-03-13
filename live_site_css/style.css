@@ -1,0 +1,744 @@
+/*
+Theme Name: Kevin 2201
+Theme URI: http://kevin2201.com
+Description: A child theme based on Twenty Sixteen.
+Author: Kevin Gao
+Author URI: http://kevin2201.com
+Template: twentysixteen
+Version: 0.1.0
+Tags:
+*/
+
+
+/* under development */
+/*
+.site-header::after{
+    content: "[ under development ]";
+    margin-bottom: 20px;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 200;
+    width: 100%;
+    position: fixed;
+    bottom: -20px;
+    z-index: 999;
+}
+*/
+
+
+/**
+ * about selecting texts
+ */
+
+*::selection {
+    background-color: #fed648;
+}
+
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/**
+ * change typeface
+ */
+
+*,
+.widget .widget-title,
+.entry-title,
+.comment-reply-title,
+input,
+input[type="submit"],
+.comment-form label,
+textarea,
+.post-navigation .post-title {
+    transition: 0.13s linear;
+    font-family: 'acumin pro', 'acumin-pro', 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+.site-branding .site-title a {
+    font-family: Montserrat, 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+.menu-toggle{
+    font-family: 'acumin pro', 'acumin-pro', 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+::-webkit-input-placeholder {
+	font-family: 'acumin pro', 'acumin-pro', 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+:-moz-placeholder {
+	font-family: 'acumin pro', 'acumin-pro', 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+::-moz-placeholder {
+	font-family: 'acumin pro', 'acumin-pro', 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+:-ms-input-placeholder {
+	font-family: 'acumin pro', 'acumin-pro', 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+
+/**
+ * border color
+ */
+
+body {
+    background-color: white;
+}
+
+#page {
+}
+
+.site-inner {
+	background-color: #f8f8f8;
+    min-width: 100%;
+/*    max-width: 980px;*/
+    min-height: 100vh;
+}
+
+/**
+ * change theme color
+ */
+
+a {
+    color: #686868;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #888;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus,
+.main-navigation a:active,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus,
+.dropdown-toggle:active,
+.social-navigation a:hover:before,
+.social-navigation a:focus:before,
+.social-navigation a:active:before,
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title,
+.post-navigation a:active .post-title,
+.tagcloud a:hover,
+.tagcloud a:focus,
+.tagcloud a:active,
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus,
+.site-branding .site-title a:active,
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggle:active,
+.entry-title a:hover,
+.entry-title a:focus,
+.entry-title a:active,
+.entry-footer a:hover,
+.entry-footer a:focus,
+.entry-footer a:active,
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.comment-metadata a:active,
+.pingback .comment-edit-link:hover,
+.pingback .comment-edit-link:focus,
+.pingback .comment-edit-link:active,
+.comment-reply-link,
+.comment-reply-link:hover,
+.comment-reply-link:focus,
+.comment-reply-link:active,
+.required,
+.site-info a:hover,
+.site-info a:focus,
+.site-info a:active,
+.main-navigation li > a:hover,
+.main-navigation li > a:focus,
+.main-navigation li > a:active {
+    color: #888;
+}
+
+ins,
+button:hover,
+button:focus,
+button:active,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="button"]:active,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:active,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active,
+.pagination .prev:hover,
+.pagination .prev:focus,
+.pagination .prev:active,
+.pagination .next:hover,
+.pagination .next:focus,
+.pagination .next:active,
+.widget_calendar tbody a,
+.page-links a:hover,
+.page-links a:focus,
+.page-links a:active {
+    background-color: #888;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+.tagcloud a:hover,
+.tagcloud a:focus,
+.tagcloud a:active,
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggle:active {
+	border-color: #888;
+}
+
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus,
+.site-branding .site-title a:active {
+    color: #222;
+    text-shadow: 0 2px 0 #ccc;
+}
+
+/*
+ * change main structure
+ **/
+
+.site-header {
+    max-width: 1320px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.site-content, .site-footer {
+    max-width: 1320px;
+    margin: auto;
+}
+
+.content-area {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.widget-area {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.widget,
+.navigation,
+.page-header,
+.post-navigation div + div,
+.comments-title,
+.comment-reply-title {
+	border: none;
+}
+
+input[type="search"].search-field {
+    border-color: #e3e3e3 transparent #e3e3e3 #e3e3e3;
+}
+
+input[type="search"].search-field:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus {
+    background-color: #fdfdfd;
+	border-color: #f1f1f1;
+}
+
+
+
+.site-header-menu {
+    display: block;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.site-header-menu.toggled-on {
+    max-height: 100px;
+/*  every block is 50px tall by default  */
+}
+
+.entry-content a,
+.entry-summary a,
+.taxonomy-description a,
+.logged-in-as a,
+.comment-content a,
+.pingback .comment-body > a,
+.textwidget a,
+.entry-footer a:hover,
+.site-info a:hover,
+.widget li a:hover {
+	box-shadow: 0 1px 0 0 currentColor;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+    box-shadow: none;
+}
+
+.entry-footer,
+.entry-content {
+    transition: none;
+    margin-right: 7.6923%;
+    line-height: 1.6;
+}
+
+.entry-content div {
+/*    background-color: #dddddd;*/
+    display: block;
+    float: left;
+    width: 100%;
+    height: 0;
+    padding-bottom: 62.8%;
+    margin: none;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    border-radius: 0px;
+    transition: all 0.23s ease-out;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.entry-content div img {
+    width: 100%;
+    line-height: 0;
+    display: block;
+    vertical-align: middle;
+}
+
+.entry-content div:hover {
+/*    background-color: #939393;*/
+    box-shadow: 0 14px 22px 0 rgba(0,0,0,0.45);
+    z-index: 50;
+}
+
+.entry-content div:active {
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.3);
+    transition: all 0.13s ease-out;
+}
+
+.entry-content div>p {
+    height: 50px;
+    line-height: 35px;
+    color: #f8f8f8;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: center;
+    text-shadow: 0 0px 8px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.7);
+    overflow: hidden;
+    position: relative;
+    top: -35px;
+    opacity: 1;
+}
+
+body:not(.search-results) article:not(.type-page) .entry-footer {
+    margin-top: 40px;
+}
+
+/*    category-work*/
+body:not(.search-results) article.type-work .entry-content {
+    font-size: 1rem;
+    clear: both;
+}
+
+.type-work .entry-footer{
+    display: none;
+}
+
+.type-work .entry-content .work-description {
+    width: 100%;
+}
+
+.type-work .entry-content .work-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    overflow: visible;
+}
+
+div.work-content:hover,
+div.work-content:focus,
+div.work-content:active {
+    box-shadow: none;
+}
+
+.type-work .entry-content .work-content>img {
+/*    border-radius: 2px;*/
+    width: 100%;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.type-work .entry-content .work-content>img.below-entry-meta {
+    max-width: 100%;
+    margin-left: 0;
+}
+
+.widget-area{
+    padding-right: 7.6923%;
+}
+
+.entry-content .back-to-top{
+    display: block;
+    display: none;
+    clear: both;
+    float: right;
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+    background-color: #654321;
+    box-shadow: none;
+}
+
+.entry-content .back-to-top:hover,
+.entry-content .back-to-top:focus,
+.entry-content .back-to-top:active{
+    box-shadow: none;
+}
+
+.entry-content .back-to-top a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ * about page
+ */
+
+.page-id-11 .entry-content{
+    max-width: 700px;
+}
+
+.page-id-11 .entry-content p + p{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.page-id-11 .entry-content a{
+    color: #1a1a1a;
+    box-shadow: none;
+}
+
+.page-id-11 .entry-content a:hover{
+    box-shadow: 0 1px 0 0 currentcolor;
+}
+
+
+/**
+ * resume page
+ */
+
+.page-id-309 .contact-info{
+    line-height: 1.75;
+}
+
+.page-id-309 hr{
+    margin: 40px auto;
+}
+
+.page-id-309 .entry-content div.resume-section{
+    height: auto;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 50px;
+    overflow: visible;
+}
+
+.page-id-309 .resume-section-title{
+    margin: 0 0 20px;
+}
+
+.page-id-309 .resume-section-content{
+    box-shadow: none;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.page-id-309 .resume-section-content:hover,
+.page-id-309 .resume-section-content:focus,
+.page-id-309 .resume-section-content:active{
+    box-shadow: none;
+}
+
+.page-id-309 .resume-section-content p{
+    background-color: transparent;
+    color: #1a1a1a;
+    font-weight: normal;
+    font-size: 1rem;
+    text-shadow: none;
+    text-align: left;
+    margin: 0 0 20px;
+    position: static;
+    line-height: 1.5;
+    height: auto;
+}
+
+.page-id-309 h3{
+    font-size: 1rem;
+    margin: 0 0 20px;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.page-id-309 .resume-section-content li{
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+.page-id-309 p.resume-note{
+    color: #aaa;
+    font-style: italic;
+}
+
+
+/**
+ * footer - site info
+ */
+
+.site-footer .site-title:after{
+    content: none;
+}
+
+body:not(.page-id-7) .site-footer .site-title a:first-of-type:before{
+    content: "\2190 \00a0 \00a0 Back to ";
+}
+
+.site-title a:last-of-type span{
+    display: none;
+}
+
+.site-footer a:empty{
+    display: none;
+}
+
+
+@media screen and (min-width: 44.375em) {
+    .site-title a:last-of-type span{
+        display: inline;
+    }
+    
+    
+    /**
+     * resume page
+     */
+    
+    .page-id-309 .resume-section-content ul{
+        list-style-position: inside;
+        list-style-type: disc;
+        position: relative;
+        left: 5px;
+    }
+}
+
+@media screen and (min-width: 48.9375em) {
+    
+}
+
+/*nav bar trans into menu*/
+@media screen and (min-width: 56.875em) {
+    .site-header-menu {
+        display: block;
+        max-height: 200px;
+        margin: 1.75em 0;
+        overflow: visible;
+    }
+    
+    .main-navigation a {
+/*        box-shadow: 0 4px 0 -4px currentcolor;*/
+        transition: all 0.25s linear;
+        vertical-align: baseline;
+    }
+
+    .main-navigation a:hover,
+    .main-navigation a:focus {
+        box-shadow: 0 11px 0 -8px currentColor;
+    }
+    
+    .entry-content,
+    .entry-footer {
+        margin-right: 0;
+    }
+    
+    body:not(.search-results) article:not(.type-page) .entry-content {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    body:not(.search-results) article:not(.type-page) .entry-footer {
+        width: 100%;
+    }
+        
+    .entry-content div {
+        width: 24.25%;
+        padding-bottom: 15.2%;
+        margin: 0.5%;
+    }
+    
+    .entry-content div:nth-child(4n+1) {
+        margin-left: 0;
+    }
+    
+    .entry-content div:nth-child(4n) {
+        margin-right: 0;
+    }
+    
+    .entry-content div>p {
+        top: 0px;
+        transition: all 0.2s ease-out;
+    }
+    
+    .entry-content div:hover>p {
+        top: -35px;
+    }
+    
+    .widget-area{
+        padding-right: 0;
+    }
+    
+    .page-id-11 .entry-content {
+        line-height: 1.75;
+    }
+    
+    
+    /**
+     * resume page
+     */
+
+    .page-id-309 h1{
+        font-size: 2.5rem;
+    }
+
+    .page-id-309 .contact-info{
+        line-height: 1.75;
+    }
+
+    .page-id-309 hr{
+        margin: 60px auto;
+    }
+
+    .page-id-309 .entry-content div.resume-section{
+        width: 100%;
+        margin: 0 0 90px;
+        clear: both;
+    }
+
+    .page-id-309 .resume-section-title{
+        font-size: 1.75rem;
+        width: 25%;
+        padding-right: 20px;
+        float: left;
+        margin: 0;
+        position: relative;
+        top: -6px;
+    }
+
+    .page-id-309 .resume-section-content{
+        width: 75%;
+        float: right;
+    }
+
+    .page-id-309 .resume-section-content p{
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1.75;
+    }
+
+    .page-id-309 h3{
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1.75;
+    }
+
+    .page-id-309 .resume-section-content li{
+        line-height: 1.75;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 61.5625em) {
+    body:not(.search-results) article:not(.type-page) .entry-content {
+        width: 82%;
+        margin-right: 0;
+    }
+    
+    body:not(.search-results) article:not(.type-page) .entry-footer {
+        width: 18%;
+        margin-top: 0;
+    }
+    
+    .post-navigation .nav-previous,
+    .post-navigation .nav-next {
+        width: 40%;
+        float: left;
+        margin-top: -50px;
+        margin-bottom: 25px;
+    }
+    
+    .post-navigation .nav-next {
+        float: right;
+        text-align: right;
+    }
+    
+    
+    /**
+     * category-work
+     */
+    
+    body:not(.search-results) article.type-work .entry-content {
+        font-size: 0.75rem;
+        width: 100%;
+        line-height: 1.5;
+/*        overflow: hidden;*/
+    }
+    
+    .type-work .entry-content .work-description {
+        width: 25%;
+        padding-right: 20px;
+        float: left;
+    }
+
+    .type-work .entry-content .work-content {
+        padding: 0;
+        width: 75%;
+        float: right;
+    }
+}
+
+@media screen and (min-width: 75em) {
+    
+}
+
+@media print {
+    
+}

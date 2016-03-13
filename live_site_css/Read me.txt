@@ -1,0 +1,7 @@
+“Resume” page id numbers are different on live site and local site, The live site css changes
+
+page-id-116
+
+to
+
+page-id-309
