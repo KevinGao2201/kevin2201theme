@@ -13,7 +13,10 @@
 		</div><!-- .site-content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php if ( has_nav_menu( 'primary' ) ) : ?>
+		    <?php if (is_page('about')){
+                //Do nothing
+            }else{ 
+            if ( has_nav_menu( 'primary' ) ) : ?>
 				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Primary Menu', 'twentysixteen' ); ?>">
 					<?php
 						wp_nav_menu( array(
@@ -23,6 +26,7 @@
 					?>
 				</nav><!-- .main-navigation -->
 			<?php endif; ?>
+			<?php }; ?>
 
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
 				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentysixteen' ); ?>">
