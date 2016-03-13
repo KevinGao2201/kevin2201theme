@@ -11,6 +11,7 @@ Tags:
 
 
 /* under development */
+/*
 .site-header::after{
     content: "[ under development ]";
     margin-bottom: 20px;
@@ -22,6 +23,7 @@ Tags:
     bottom: -20px;
     z-index: 999;
 }
+*/
 
 
 /**
@@ -91,14 +93,13 @@ body {
 }
 
 #page {
-/*    height: 100vh;*/
 }
 
 .site-inner {
 	background-color: #f8f8f8;
     min-width: 100%;
 /*    max-width: 980px;*/
-    min-height: 200%;
+    min-height: 100vh;
 }
 
 /**
@@ -303,7 +304,7 @@ input[type="url"]:focus {
 }
 
 .entry-content div {
-    background-color: #dddddd;
+/*    background-color: #dddddd;*/
     display: block;
     float: left;
     width: 100%;
@@ -312,7 +313,7 @@ input[type="url"]:focus {
     margin: none;
     margin-bottom: 10px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
-    border-radius: 2px;
+    border-radius: 0px;
     transition: all 0.23s ease-out;
     z-index: 1;
     position: relative;
@@ -327,7 +328,7 @@ input[type="url"]:focus {
 }
 
 .entry-content div:hover {
-    background-color: #939393;
+/*    background-color: #939393;*/
     box-shadow: 0 14px 22px 0 rgba(0,0,0,0.45);
     z-index: 50;
 }
@@ -388,10 +389,10 @@ div.work-content:active {
 }
 
 .type-work .entry-content .work-content>img {
-    border-radius: 2px;
+/*    border-radius: 2px;*/
     width: 100%;
     margin-bottom: 15px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
 }
 
 .type-work .entry-content .work-content>img.below-entry-meta {
@@ -452,6 +453,76 @@ div.work-content:active {
 
 
 /**
+ * resume page
+ */
+
+.page-id-116 .contact-info{
+    line-height: 1.75;
+}
+
+.page-id-116 hr{
+    margin: 40px auto;
+}
+
+.page-id-116 .entry-content div.resume-section{
+    height: auto;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 50px;
+    overflow: visible;
+}
+
+.page-id-116 .resume-section-title{
+    margin: 0 0 20px;
+}
+
+.page-id-116 .resume-section-content{
+    box-shadow: none;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.page-id-116 .resume-section-content:hover,
+.page-id-116 .resume-section-content:focus,
+.page-id-116 .resume-section-content:active{
+    box-shadow: none;
+}
+
+.page-id-116 .resume-section-content p{
+    background-color: transparent;
+    color: #1a1a1a;
+    font-weight: normal;
+    font-size: 1rem;
+    text-shadow: none;
+    text-align: left;
+    margin: 0 0 20px;
+    position: static;
+    line-height: 1.5;
+    height: auto;
+}
+
+.page-id-116 h3{
+    font-size: 1rem;
+    margin: 0 0 20px;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.page-id-116 .resume-section-content li{
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+.page-id-116 p.resume-note{
+    color: #aaa;
+    font-style: italic;
+}
+
+
+/**
  * footer - site info
  */
 
@@ -475,6 +546,18 @@ body:not(.page-id-7) .site-footer .site-title a:first-of-type:before{
 @media screen and (min-width: 44.375em) {
     .site-title a:last-of-type span{
         display: inline;
+    }
+    
+    
+    /**
+     * resume page
+     */
+    
+    .page-id-116 .resume-section-content ul{
+        list-style-position: inside;
+        list-style-type: disc;
+        position: relative;
+        left: 5px;
     }
 }
 
@@ -517,9 +600,17 @@ body:not(.page-id-7) .site-footer .site-title a:first-of-type:before{
     }
         
     .entry-content div {
-        width: 24%;
-        padding-bottom: 15%;
+        width: 24.25%;
+        padding-bottom: 15.2%;
         margin: 0.5%;
+    }
+    
+    .entry-content div:nth-child(4n+1) {
+        margin-left: 0;
+    }
+    
+    .entry-content div:nth-child(4n) {
+        margin-right: 0;
     }
     
     .entry-content div>p {
@@ -535,6 +626,64 @@ body:not(.page-id-7) .site-footer .site-title a:first-of-type:before{
         padding-right: 0;
     }
     
+    .page-id-11 .entry-content {
+        line-height: 1.75;
+    }
+    
+    
+    /**
+     * resume page
+     */
+
+    .page-id-116 h1{
+        font-size: 2.5rem;
+    }
+
+    .page-id-116 .contact-info{
+        line-height: 1.75;
+    }
+
+    .page-id-116 hr{
+        margin: 60px auto;
+    }
+
+    .page-id-116 .entry-content div.resume-section{
+        width: 100%;
+        margin: 0 0 90px;
+        clear: both;
+    }
+
+    .page-id-116 .resume-section-title{
+        font-size: 1.75rem;
+        width: 25%;
+        padding-right: 20px;
+        float: left;
+        margin: 0;
+        position: relative;
+        top: -6px;
+    }
+
+    .page-id-116 .resume-section-content{
+        width: 75%;
+        float: right;
+    }
+
+    .page-id-116 .resume-section-content p{
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1.75;
+    }
+
+    .page-id-116 h3{
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1.75;
+    }
+
+    .page-id-116 .resume-section-content li{
+        line-height: 1.75;
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 61.5625em) {
@@ -562,11 +711,14 @@ body:not(.page-id-7) .site-footer .site-title a:first-of-type:before{
     }
     
     
-    /*    category-work*/
+    /**
+     * category-work
+     */
     
     body:not(.search-results) article.type-work .entry-content {
         font-size: 0.75rem;
         width: 100%;
+        line-height: 1.5;
 /*        overflow: hidden;*/
     }
     
