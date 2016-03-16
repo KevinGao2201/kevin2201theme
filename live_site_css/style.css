@@ -303,7 +303,7 @@ input[type="url"]:focus {
     line-height: 1.6;
 }
 
-.entry-content div {
+.home .entry-content div {
 /*    background-color: #dddddd;*/
     display: block;
     float: left;
@@ -320,25 +320,25 @@ input[type="url"]:focus {
     overflow: hidden;
 }
 
-.entry-content div img {
+.home .entry-content div img {
     width: 100%;
     line-height: 0;
     display: block;
     vertical-align: middle;
 }
 
-.entry-content div:hover {
+.home .entry-content div:hover {
 /*    background-color: #939393;*/
     box-shadow: 0 14px 22px 0 rgba(0,0,0,0.45);
     z-index: 50;
 }
 
-.entry-content div:active {
+.home .entry-content div:active {
     box-shadow: 0 10px 14px 0 rgba(0,0,0,0.3);
     transition: all 0.13s ease-out;
 }
 
-.entry-content div>p {
+.home .entry-content div>p {
     height: 50px;
     line-height: 35px;
     color: #f8f8f8;
@@ -406,27 +406,30 @@ div.work-content:active {
 
 .entry-content .back-to-top{
     display: block;
-    display: none;
+    position: relative;
+    top: 20px;
+/*    display: none;*/
     clear: both;
-    float: right;
-    width: 75px;
-    height: 75px;
-    padding: 0;
-    margin: 0;
-    background-color: #654321;
-    box-shadow: none;
-}
-
-.entry-content .back-to-top:hover,
-.entry-content .back-to-top:focus,
-.entry-content .back-to-top:active{
-    box-shadow: none;
+    float: left;
+    width: 100px;
+    height: 40px;
+    background-color: #1a1a1a;
 }
 
 .entry-content .back-to-top a{
     position: absolute;
+    box-shadow: none;
     width: 100%;
     height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+}
+
+.entry-content .back-to-top:hover{
+    background-color: #666;
 }
 
 /**
@@ -599,26 +602,26 @@ body:not(.page-id-7) .site-footer .site-title a:first-of-type:before{
         width: 100%;
     }
         
-    .entry-content div {
+    .home .entry-content div {
         width: 24.25%;
         padding-bottom: 15.2%;
         margin: 0.5%;
     }
     
-    .entry-content div:nth-child(4n+1) {
+    .home .entry-content div:nth-child(4n+1) {
         margin-left: 0;
     }
     
-    .entry-content div:nth-child(4n) {
+    .home .entry-content div:nth-child(4n) {
         margin-right: 0;
     }
     
-    .entry-content div>p {
+    .home .entry-content div>p {
         top: 0px;
         transition: all 0.2s ease-out;
     }
     
-    .entry-content div:hover>p {
+    .home .entry-content div:hover>p {
         top: -35px;
     }
     
@@ -628,6 +631,10 @@ body:not(.page-id-7) .site-footer .site-title a:first-of-type:before{
     
     .page-id-11 .entry-content {
         line-height: 1.75;
+    }
+    
+    .entry-content .back-to-top{
+        float: right;
     }
     
     
