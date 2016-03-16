@@ -10,4 +10,13 @@ function load_my_fonts() {
 }add_action('wp_print_styles', 'load_my_fonts');
 */
 
+/*
+function my_add_scripts() {
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('flexslider', get_stylesheet_directory_uri().'/js/jquery.flexslider-min.js', array('jquery'));
+	wp_enqueue_script('flexslider-init', get_stylesheet_directory_uri().'/js/flexslider-init.js', array('jquery', 'flexslider'));
+    wp_enqueue_style('flexslider-style', get_stylesheet_directory_uri().'/css/flexslider.css');
+}
+add_action('wp_enqueue_scripts', 'my_add_scripts');
+*/
 ?>
