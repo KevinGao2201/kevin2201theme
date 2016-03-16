@@ -44,7 +44,8 @@
 				get_template_part( 'template-parts/biography' );
 			}
 		?>
-		<div class="back-to-top"><a href="#"></a></div>   
+		<div class="back-to-top"><a href="#">Back to top</a></div>        
+        
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
