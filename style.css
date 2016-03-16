@@ -488,12 +488,6 @@ div.work-content:active {
     overflow: visible;
 }
 
-.page-id-116 .resume-section-content:hover,
-.page-id-116 .resume-section-content:focus,
-.page-id-116 .resume-section-content:active{
-    box-shadow: none;
-}
-
 .page-id-116 .resume-section-content p{
     background-color: transparent;
     color: #1a1a1a;
@@ -655,11 +649,19 @@ body:not(.page-id-7) .site-footer .site-title a:first-of-type:before{
     }
 
     .page-id-116 .entry-content div.resume-section{
+        display: block;
+        height: auto;
         width: 100%;
         margin: 0 0 90px;
-        clear: both;
+        position: relative;
     }
 
+    .page-id-116 .entry-content div.resume-section:after{
+        clear: both;
+        content: "";
+        display: block;
+    }
+    
     .page-id-116 .resume-section-title{
         font-size: 1.75rem;
         width: 25%;
